@@ -1,6 +1,12 @@
 import java.util.Scanner;
 
 public class Principal {
+    
+    public static void limparTela() {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+    }
+    
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         
@@ -9,6 +15,8 @@ public class Principal {
         int opcao = 0;
         
         while (opcao != 4) {
+            limparTela();
+            
             System.out.println("\n=== MENU ===");
             System.out.println("1 - Retirar medicamento");
             System.out.println("2 - Repor medicamento");
@@ -23,12 +31,18 @@ public class Principal {
                     System.out.print("Quantos medicamentos retirar? ");
                     int qtdRetirar = scanner.nextInt();
                     medicamento.retirarMedicamento(qtdRetirar);
+                    System.out.print("\nPressione ENTER para continuar...");
+                    scanner.nextLine();
+                    scanner.nextLine();
                     break;
                     
                 case 2:
                     System.out.print("Quantos medicamentos repor? ");
                     int qtdRepor = scanner.nextInt();
                     medicamento.reporMedicamento(qtdRepor);
+                    System.out.print("\nPressione ENTER para continuar...");
+                    scanner.nextLine();
+                    scanner.nextLine();
                     break;
                     
                 case 3:
@@ -36,6 +50,9 @@ public class Principal {
                     System.out.println("Estoque: " + medicamento.getQuantidadeEstoque());
                     System.out.println("Mínimo: " + medicamento.getQuantidadeMinima());
                     medicamento.verificarEstoque();
+                    System.out.print("\nPressione ENTER para continuar...");
+                    scanner.nextLine();
+                    scanner.nextLine();
                     break;
                     
                 case 4:
@@ -44,6 +61,9 @@ public class Principal {
                     
                 default:
                     System.out.println("Opção inválida!");
+                    System.out.print("\nPressione ENTER para continuar...");
+                    scanner.nextLine();
+                    scanner.nextLine();
             }
         }
         
