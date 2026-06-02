@@ -1,5 +1,5 @@
 # UEPB - Universidade Estadual da Paraíba
-* **Curso:** Tecnologia em Análise e Desenvolvimento de Sistemas - JP (Campus I)
+* **Curso:** Tecnologia em Análise e Desenvolvimento de Sistemas - JP (Campus V)
 * **Estudante:** Ryan Batista Borge Braga
 * **Matrícula:** 2025206510132
 
