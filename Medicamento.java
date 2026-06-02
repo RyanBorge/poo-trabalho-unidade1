@@ -32,6 +32,27 @@ public class Medicamento {
         this.quantidadeMinima = quantidadeMinima;
     }
 
-        
+    public void retirarMedicamento(int quantidade) {
+        if (quantidade <= quantidadeEstoque) {
+            quantidadeEstoque -= quantidade;
+            verificarEstoque();
+        } else {
+            System.out.println("Erro: Não há quantidade suficiente!");
+        }
+    }
+
+     public void reporMedicamento(int quantidade) {
+        quantidadeEstoque += quantidade;
+        System.out.println("Medicamento reposto com sucesso!");
+        verificarEstoque();
+    }
+    
+    public void verificarEstoque() {
+        if (quantidadeEstoque < quantidadeMinima) {
+            System.out.println("Atenção: estoque baixo!");
+        } else {
+            System.out.println("Estoque adequado!");
+        }
+    }
 
 }
